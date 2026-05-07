@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Laura</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="nome">Laura</h1>
+        <nav>
+            <a href="#" onclick="abrirModal('twice')">TWICE</a>
+            <a href="#" onclick="abrirModal('marvel')">MARVEL</a>
+            <a href="#" onclick="abrirModal('taylor')">TAYLOR SWIFT</a>
+        </nav>
+    </header>
+
+    <!-- INÍCIO -->
+    <main class="inicio">
+        <div class="texto-intro">
+            <h2>Olá, eu sou a Laura!</h2>
+            <p>
+                Tenho 16 anos e estou no segundo ano do Ensino Médio integrado ao curso técnico de 
+                Desenvolvimento de Sistemas. Sou apaixonada por música, fotografia e uma grande fã do universo Marvel. 
+                Além disso, toco piano, pratico aquarela e valorizo muito o tempo com os meus amigos.
+                Busco sempre equilibrar minha vida social e acadêmica, cultivando interesses que 
+                me inspiram tanto dentro quanto fora da tecnologia.
+            </p>
+        </div>
+        <div class="foto-container">
+            <img src="https://i.pinimg.com/1200x/4e/1d/82/4e1d82e902140d4e562e23f33e4f313a.jpg" alt="Natasha Romanoff" class="foto" />
+        </div>
+    </main>
+
+    <!-- MODAIS -->
+    <div class="overlay" id="overlay" onclick="fecharModal()"></div>
+
+    <div class="modal" id="modal-twice">
+        <button class="fechar" onclick="fecharModal()">✕</button>
+        <h2>TWICE ♡</h2>
+        <p>
+            Conheci o TWICE em outubro de 2021, quando o grupo lançou seu primeiro single em inglês, 
+            "The Feels". Porém, me tornei fã de verdade em março de 2022, após descobrir toda a sua 
+            discografia e a incrível comunidade que as rodeia. TWICE é um grupo feminino sul-coreano 
+            formado pela JYP Entertainment em 2015, composto por nove integrantes: Nayeon, Jeongyeon, 
+            Momo, Sana, Jihyo, Mina, Dahyun, Chaeyoung e Tzuyu.
+        </p>
+    </div>
+
+    <div class="modal" id="modal-marvel">
+        <button class="fechar" onclick="fecharModal()">✕</button>
+        <h2>MARVEL ☆</h2>
+        <p>
+            Fui apresentada à Marvel pela minha irmã mais velha, que me mostrou os filmes desde 
+            pequena. Tenho memórias especiais de assistir Capitão América: Guerra Civil no cinema 
+            com ela, e também de ver Vingadores: Ultimato na pré-estreia. Crescer com essas histórias também foi um grande incentivo para aprender inglês. Sou especialmente 
+            fã do MCU, produzido pela Marvel Studios e baseado na Marvel Comics.
+        </p>
+    </div>
+
+    <div class="modal" id="modal-taylor">
+        <button class="fechar" onclick="fecharModal()">✕</button>
+        <h2>TAYLOR SWIFT ✦</h2>
+        <p>
+            Comecei a ouvir Taylor Swift de verdade em fevereiro de 2023, por indicação de uma amiga, mas percebi que já conhecia várias músicas dela sem saber que eram dela. Taylor Swift 
+            é cantora, compositora, produtora musical, diretora e empresária americana. Reconhecida 
+            mundialmente por suas composições narrativas e autobiográficas, ela é uma das artistas 
+            mais influentes da música contemporânea.
+        </p>
+    </div>
+
+    <script>
+        function abrirModal(tema) {
+            document.getElementById('overlay').classList.add('ativo');
+            document.getElementById('modal-' + tema).classList.add('ativo');
+        }
+
+        function fecharModal() {
+            document.querySelectorAll('.modal').forEach(m => m.classList.remove('ativo'));
+            document.getElementById('overlay').classList.remove('ativo');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* ===== GERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f1f5;
+    font-family: Georgia, serif;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #e36888;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.nome {
+    color: #f9f1f5;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #f9f1f5;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    transform: translateY(-5px);
+    color: #f2d88f;
+}
+
+/* ===== INÍCIO ===== */
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 100px;
+    min-height: calc(100vh - 80px);
+}
+
+.texto-intro h2 {
+    color: #e36888;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.texto-intro p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.9;
+    max-width: 480px;
+}
+
+.foto-container {
+    flex-shrink: 0;
+}
+
+.foto {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid #e36888;
+    box-shadow: 0 8px 24px rgba(227, 104, 136, 0.3);
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.overlay.ativo {
+    display: block;
+}
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-top: 6px solid #e36888;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 520px;
+    width: 90%;
+    z-index: 20;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.modal.ativo {
+    display: block;
+}
+
+.modal h2 {
+    color: #e36888;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.modal p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.fechar {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.fechar:hover {
+    color: #e36888;
+}
